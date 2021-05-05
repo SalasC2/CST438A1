@@ -11,12 +11,14 @@
             <tr>
                 <th> Title </th>
                 <th> Rating</th>
-                <th> Review Name </th>
+                <th> Reviewer Name </th>
+                <th> Time Submitted </th>
             </tr>
             <tr th:each="movieRating: ${movieRatings}">
                 <td th:text="${movieRating.title}"> </td>
                 <td th:text="${movieRating.rating}"> </td>
                 <td th:text="${movieRating.personName}"> </td>
+                <td th:text="${movieRating.dateTime}"> </td>
             </tr> 
        </table>
 </body>

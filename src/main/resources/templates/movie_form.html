@@ -8,10 +8,7 @@
     <form action="#" th:action="@{/movies/new}" th:object="${movieRating}" method="POST">
         Title: <input type='text' th:field="*{title}" />
             <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}">
-                </span> <br />
-                
-        
-                
+                </span> <br />       
         <p> Rating (1-5) </p>
 		<input type="radio" id="rating1" name="rating" value="1" th:field="*{rating}">
 		  <label for="rating1">1</label><br>
@@ -28,6 +25,7 @@
         Reviewer Name: <input type='text' th:field="*{personName}" />
             <span th:if="${#fields.hasErrors('personName')}" th:errors="*{personName}">
                 </span> <br />
+       
         <input type="submit" value="Submit" />
     </form>
 </body>
